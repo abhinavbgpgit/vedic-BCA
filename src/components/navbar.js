@@ -3,7 +3,7 @@ import logo from "../assets/Color logo - no background.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faHouse} from '@fortawesome/free-solid-svg-icons'
 
-
+// demo navbar
 const Nav = () => {
 
     let links =[
