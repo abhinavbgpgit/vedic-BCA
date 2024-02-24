@@ -3,6 +3,9 @@ import './App.css';
 
 function App() {
   // mera chnage
+var name="gautam";
+  console.log(name);
+
   return (
     <div className="App">
       <header className="App-header">
