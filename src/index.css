@@ -1,12 +1,8 @@
-<<<<<<< HEAD
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-=======
-/* body {
->>>>>>> 3fc18693a3e1502b67e2d3c3a7f7447a1e6b09d5
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -18,7 +14,6 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-<<<<<<< HEAD
 }
 
 .center
@@ -27,10 +22,3 @@ code {
   justify-content: center;
   align-items: center;
 }
-=======
-} */
-
-@tailwind base; 
-@tailwind components; 
-@tailwind utilities; 
->>>>>>> 3fc18693a3e1502b67e2d3c3a7f7447a1e6b09d5
