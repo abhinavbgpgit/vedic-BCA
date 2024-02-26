@@ -9,7 +9,9 @@ import Result from './pages/Result';
 import ExamPage from './pages/ExamPage';
 
 function App() {
+  // amanraj
   return (
+<<<<<<< HEAD
     <>
     
 
@@ -28,6 +30,11 @@ function App() {
     
 
     </>
+=======
+    <div className="App ">
+     hello
+    </div>
+>>>>>>> 3fc18693a3e1502b67e2d3c3a7f7447a1e6b09d5
   );
 }
 
