@@ -17,6 +17,7 @@ const Navbar = () => {
     <div className={`md:flex text-xl text-white lg:gap-20 md:gap-10  absolute md:static  w-screen md:z-auto left-0 md:w-auto md:pl-0 pl-20 transition-all duration-500 ease-in-out ${IsBurger? 'left-0 top-20' : 'left-[-800px] top-20' } md:bg-sky-900 bg-red-500 	overflow-x- hidden;`}>
         <div className="cursor-pointer"><Link to='/'>Home</Link></div>
         <div className="cursor-pointer"><Link to='/exam'>Exam</Link></div>
+        <div className="cursor-pointer"><Link to='/result'>Result</Link></div>
         <div className="cursor-pointer"><Link to='/syllabus'>Syllabus</Link></div>
         <div className="cursor-pointer"><Link to='/result'>Result</Link></div>
         <div className="cursor-pointer"><Link to='/events'>Events</Link></div>

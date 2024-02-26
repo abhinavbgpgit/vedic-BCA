@@ -10,7 +10,7 @@ import Result from "./pages/Result";
 import ExamPage from "./pages/ExamPage";
 
 function App() {
-  // amanraj
+ 
   return (
     <>
       <Navbar />
