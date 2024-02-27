@@ -7,16 +7,17 @@ import { Routes,Route } from 'react-router-dom';
 import Syllabus from './pages/Syllabus';
 import Result from './pages/Result';
 import ExamPage from './pages/ExamPage';
+import { useLocation } from 'react-router-dom';
 
 function App() {
  
+const location=useLocation();
+
+const isHome=location.pathname;
+
   return (
-    <>
-    
-
-
-    <Navbar/> 
-
+    <>    
+ { isHome!='/' && ( <Navbar/> )} 
      <Routes>
       <Route path="/" element={<Home/>}></Route>
       <Route path="/campus" element={<Campus/>}></Route>
