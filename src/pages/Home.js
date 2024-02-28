@@ -1,19 +1,26 @@
 import React from 'react'
 import { Label, Select } from 'flowbite-react';
 import { Link } from 'react-router-dom';
+import { motion } from "framer-motion"
 const Home = () => {
   return (
 
-    <div className="center h-screen flex-col">
+    <motion.div 
+    initial={{y:"-2000px"}}
+    animate={{y:"0px"}}
+    transition={{ duration:3}}
+    
+    className="center h-screen flex-col">
    <Link to='/exam'><div className="">Go to exam page</div></Link> 
-    <div className="text-5xl">Welcome to <span className='text-blue-400'>Vedic Bihar</span> </div>
+    <motion.div drag className="text-5xl">Welcome to <motion.span  className='text-blue-400'>Vedic Bihar</motion.span> </motion.div>
     
    
     <div className='w-[500px] mt-10'>
-      <div className="mb-2 block">
-        <Label htmlFor="countries" value="Select your University" />
+      <div className="mb-2 block relative">
+        <Label htmlFor="countries" value="Select your University" className='text-lg' />
+        <motion.div drag className="absolute z-10 mt-3 ml-2 text-2xl"><i class="fa-solid fa-graduation-cap"></i></motion.div>
       </div>
-      <Select id="university" required>
+      <Select id="university" required class='text-lg text-gray-700 rounded-lg pl-12'>
       <option value="BRABU">Babasaheb Bhimrao Ambedkar Bihar University</option>
   <option value="CNLU">Chanakya National Law University</option>
   <option value="JPV">Jai Prakash Vishwavidyalaya</option>
@@ -30,9 +37,9 @@ const Home = () => {
 
     <div className='w-[500px] mt-5'>
       <div className="mb-2 block">
-        <Label htmlFor="countries" value="Select your College" />
+        <Label htmlFor="countries" value="Select your College" className='text-lg' />
       </div>
-      <Select id="university" required>
+      <Select id="university" required class='text-lg text-gray-700 rounded-lg'>
       <option value="BRABU">Marwari College</option>
   <option value="CNLU">T. N. B. College</option>
   <option value="JPV">S.M. College</option>
@@ -52,6 +59,7 @@ const Home = () => {
     <div className='w-[240px] mt-5'>
       <div className="mb-2 block">
         <Label htmlFor="countries" value="Select your Department" />
+        
       </div>
       <Select id="university" required>
       <option value="BRABU">BCA</option>
@@ -89,7 +97,7 @@ const Home = () => {
     </div>
 
 
-        </div> 
+        </motion.div> 
   )
 }
 
