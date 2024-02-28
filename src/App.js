@@ -1,28 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from './components/Navbar';
+import Campus from './pages/Campus';
+import Events from './pages/Events';
+import Home from './pages/Home';
+import { Routes,Route } from 'react-router-dom';
+import Syllabus from './pages/Syllabus';
+import Result from './pages/Result';
+import ExamPage from './pages/ExamPage';
+import { useLocation } from 'react-router-dom';
 
 function App() {
-  // mera chnage
-var name="gautam";
-  console.log(name);
+ 
+const location=useLocation();
+
+const isHome=location.pathname;
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>    
+ { isHome!='/' && ( <Navbar/> )} 
+     <Routes>
+      <Route path="/" element={<Home/>}></Route>
+      <Route path="/campus" element={<Campus/>}></Route>
+      <Route path="/events" element={<Events/>}></Route>
+      <Route path="/syllabus" element={<Syllabus/>}></Route>
+      <Route path="/result" element={<Result/>}></Route>
+      <Route path="/exam" element={<ExamPage/>}></Route>
+     </Routes>
+    
+    
+
+   
+    <div className="App ">
+     hello
+    </div> 
+    </>
   );
 }
 
