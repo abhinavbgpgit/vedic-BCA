@@ -8,6 +8,7 @@ import Syllabus from './pages/Syllabus';
 import Result from './pages/Result';
 import ExamPage from './pages/ExamPage';
 import { useLocation } from 'react-router-dom';
+import "./App.css";
 
 function App() {
  

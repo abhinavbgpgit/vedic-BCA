@@ -1,70 +1,145 @@
-import React from 'react'
-import { Button } from 'flowbite-react';
-import { Spinner } from 'flowbite-react';
-import { Label, Select } from 'flowbite-react';
+import React from "react";
+import { Label, Select } from "flowbite-react";
+import { Link } from "react-router-dom";
+import { motion, px } from "framer-motion";
+import MainLogo from "../assets/vedicbihar.png"
 const Home = () => {
   return (
-    <div className="flex justify-start h-screen flex-col items-center">
-    
-    <div className="text-3xl md:text-5xl  mt-[5%] ">Welcome to <span className='text-blue-400'>Vedic Bihar</span>  </div>
-    {/* <Button className='mt-3'>Click me</Button> */}
+
+    <motion.div 
+    initial={{ y: "-2000px" }}
+    animate={{ y: "0px" }}
+    transition={{ duration: 2 }}
+    className="main  flex justify-center gap-28  m-auto p-24 ali">
+      <div className="main-logo "> 
+    <img src={MainLogo} className="md:h-[550px] h-full w-full object-cover "/>
+       </div>
+      <div
    
+      className=" h-screen flex-col mt-10"
+    >
+      <Link to="/exam">
+        <div className=" text-xs">Go to exam page</div>
+      </Link>
+      <span className="border-b-4 border-green-500 pb-2 text-3xl font-bold tracking-widest ">Information Portal For</span>
+      <motion.div drag className="text-5xl mt-4  font-bold">
+      {" "}
+      <motion.span className="text-red-600 ">Bihar</motion.span> {" "}Higher Education
 
-    <div className="w-[400px] mt-20">
-      <div className="mb-2 block">
-        <Label htmlFor="countries" value="Select your University" />
-      </div>
-      <Select id="countries" required>
-        <option>Tilka Manjhi Bhagalpur University</option>
-        <option>Veer Kunwar Singh University</option>
-        <option>Rajendra Agricultural University"</option>
-        <option>Patna University</option>
-        <option value="">Maulana Mazharul Haque Arabic and Persian University</option>
-        <option value="">Magadh University</option>
-        <option value="">Lalit Narayan Mithila University</option>
-        <option value="">Jai Prakash Vishwavidyalaya</option>
-      </Select>
-      <div className="w-[400px] mt-5">
-      <div className="mb-2 block">
-        <Label htmlFor="countries" value="Select your University" />
-      </div>
-      <Select id="colleges" required>
-  <option>T.N.B. College, Bhagalpur</option>
-  <option>S.P. Jain College, Bhagalpur</option>
-  <option>Marwari College, Bhagalpur</option>
-  <option>J.P. College, Narayanpur</option>
-  <option>Murarka College, Sultanganj</option>
-  <option>S.S. Vidyapeeth, Deoghar</option>
-  <option>P.B.S. College, Banka</option>
-  <option>Bhagalpur National College, Bhagalpur</option>
-  <option>T.N.B. Law College, Bhagalpur</option>
-  <option>Sabour College, Sabour</option>
-  <option>G.B. College, Naugachia</option>
-  <option>Jamalpur College, Jamalpur</option>
-  <option>B.N.M. College, Barhiya</option>
-  <option>B.N.S. College, Barhiya</option>
-  <option>K.D. College, Gogri</option>
-  <option>M.S. College, Barhariya</option>
-  <option>B.N.M. College, Bhagalpur</option>
-  <option>B.N.S. College, Bhagalpur</option>
-  <option>Koshi College, Khagaria</option>
-  <option>S.M. College, Bhagalpur</option>
-  <option>G.B. College, Gopalpur</option>
-  <option>R.N.B. College, Navgachhia</option>
-  <option>S.K. Raj College, Katihar</option>
-  <option>R.D. & D.J. College, Munger</option>
-  <option>T.N.B. Commerce College, Bhagalpur</option>
-  <option>Madan Ahilya Mahila College, Naugachia</option>
-  <option>S.S.V. College, Kahalgaon</option>
-  <option>B.L.S.G. College, Maheshpur</option>
-  <option>J.M.S. College, Munger</option>
-  <option>B.N.S. Mahila College, Madhepura</option>
-</Select>
-</div>
-    </div>
-    
+      </motion.div>
+
+      <div className="w-[500px] pt-10 pl-24">
+        <div className="mb-2 block relative text-base ">
+          <Label
+            htmlFor="countries"
+            value="Select your University"
+            className="text-base"
+          />
+          <motion.div drag className="absolute z-10 mt-3 ml-2 text-2xl">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </motion.div>
         </div>
-  )
-}
+        <Select
+          id="university"
+          required
+          class="text-sm text-gray-500 rounded-lg pl-12 w-[400px]"
+        >
+          <option value="BRABU">
+            Babasaheb Bhimrao Ambedkar Bihar University
+          </option>
+          <option value="CNLU">Chanakya National Law University</option>
+          <option value="JPV">Jai Prakash Vishwavidyalaya</option>
+          <option value="LNMU">Lalit Narayan Mithila University</option>
+          <option value="MU">Magadh University</option>
+          <option value="MMHAPU">
+            Maulana Mazharul Haque Arabic and Persian University
+          </option>
+          <option value="NOU">Nalanda Open University</option>
+          <option value="PU">Patna University</option>
+          <option value="RAU">Rajendra Agricultural University</option>
+          <option value="TMBU">Tilka Manjhi Bhagalpur University</option>
+          <option value="VKSU">Veer Kunwar Singh University</option>
+        </Select>
+      </div>
 
-export default Home
+      <div className="w-[500px] pt-6 pl-24">
+        <div className="mb-2 block ">
+          <Label
+            htmlFor="countries"
+            value="Select your College"
+            className="text-base"
+          />
+        </div>
+        <Select
+          id="university"
+          required
+          class="text-sm text-gray-500 rounded-lg pl-4  w-[400px]"
+        >
+          <option value="BRABU">Marwari College</option>
+          <option value="CNLU">T. N. B. College</option>
+          <option value="JPV">S.M. College</option>
+          <option value="LNMU">Mahadev Singh College</option>
+          <option value="MU">Magadh University</option>
+          <option value="MMHAPU">
+            Maulana Mazharul Haque Arabic and Persian University
+          </option>
+          <option value="NOU">Nalanda Open University</option>
+          <option value="PU">Patna University</option>
+          <option value="RAU">Rajendra Agricultural University</option>
+          <option value="TMBU">Tilka Manjhi Bhagalpur University</option>
+          <option value="VKSU">Veer Kunwar Singh University</option>
+        </Select>
+      </div>
+
+      <div className=" flex gap-5 pt-3 pl-24">
+        <div className="w-[240px] mt-5">
+          <div className="mb-2 block">
+            <Label htmlFor="countries" value="Select your Department" className="text-base"/>
+          </div>
+          <Select id="university" required class="text-sm text-gray-500 rounded-lg pl-4  w-[400px] ">
+            <option value="BRABU">BCA</option>
+            <option value="CNLU">BBA</option>
+            <option value="JPV">BIT</option>
+            <option value="LNMU">BSc</option>
+            <option value="MU">BCom</option>
+            {/* <option value="MMHAPU">
+              Maulana Mazharul Haque Arabic and Persian University
+            </option>
+            <option value="NOU">Nalanda Open University</option>
+            <option value="PU">Patna University</option>
+            <option value="RAU">Rajendra Agricultural University</option>
+            <option value="TMBU">Tilka Manjhi Bhagalpur University</option>
+            <option value="VKSU">Veer Kunwar Singh University</option> */}
+          </Select>
+        </div>
+        {/* <div className="w-[240px] mt-5">
+          <div className="mb-2 block">
+            <Label htmlFor="countries" value="Select your Semester/Year" />
+          </div>
+          <Select id="university" required>
+            <option value="1st Sem">1st Sem</option>
+            <option value="CNLU">2nd sem</option>
+            <option value="JPV">3rd sem</option>
+            <option value="LNMU">4th sem</option>
+            <option value="MU">5th sem</option>
+            <option value="MMHAPU">6th sem</option>
+            <option value="NOU">7th sem</option>
+            <option value="PU">8th sem</option>
+            <option value="RAU">1st year</option>
+            <option value="TMBU">2nd year</option>
+            <option value="VKSU">3rd year</option>
+          </Select>
+        </div> */}
+      </div>
+      <div className="next flex justify-end mt-6 mr-[35px]">
+        <button className="text-sm font-semibold text-black border-2 border-gray-400 rounded-lg p-1 pl-4 pr-4">
+          Next<i class="fa-solid fa-arrow-right ml-2"></i>
+        </button>
+      </div>
+    </div>
+    </motion.div>
+   
+  );
+};
+
+export default Home;
