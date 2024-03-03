@@ -9,10 +9,11 @@ const Home = () => {
     <motion.div 
     initial={{ y: "-2000px" }}
     animate={{ y: "0px" }}
+    exit={{ x: "-2000px" }}
     transition={{ duration: 2 }}
     className="main  flex justify-center gap-28  m-auto p-24 ali">
       <div className="main-logo "> 
-    <img src={MainLogo} className="md:h-[550px] h-full w-full object-cover "/>
+    <img src={MainLogo} className="md:h-[550px] h-full w-full object-cover rounded-3xl"/>
        </div>
       <div
    
@@ -132,9 +133,10 @@ const Home = () => {
         </div> */}
       </div>
       <div className="next flex justify-end mt-6 mr-[35px]">
-        <button className="text-sm font-semibold text-black border-2 border-gray-400 rounded-lg p-1 pl-4 pr-4">
+        <Link to="/HomepageB"><button className="text-sm font-semibold text-black  p-1 pl-4 pr-4">
           Next<i class="fa-solid fa-arrow-right ml-2"></i>
-        </button>
+        </button></Link>
+        
       </div>
     </div>
     </motion.div>
