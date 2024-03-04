@@ -16,8 +16,17 @@ const HomepageD = () => {
         // }
         if (input.value !=="" && index<inputBoxes.length-1){
             inputBoxes[index+1].focus();
+            console.log('entered'); 
         }
+
       });
+      input.addEventListener('keydown',(event)=>{
+        if(event.key ==="Backspace" && input.value==="" && index>0){
+          console.log('Keydown event fired'); 
+          inputBoxes[index -1].value = "";
+          inputBoxes[index -1].focus();
+        }
+      })
     });
   });
   return (
