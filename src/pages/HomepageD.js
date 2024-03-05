@@ -16,13 +16,13 @@ const HomepageD = () => {
         // }
         if (input.value !=="" && index<inputBoxes.length-1){
             inputBoxes[index+1].focus();
-            console.log('entered'); 
+             
         }
 
       });
-      input.addEventListener('keydown',(event)=>{
-        if(event.key ==="Backspace" && input.value==="" && index>0){
-          console.log('Keydown event fired'); 
+      input.addEventListener('keydown',(e)=>{
+        if(e.key ==="Backspace" && input.value==="" && index>0){
+          
           inputBoxes[index -1].value = "";
           inputBoxes[index -1].focus();
         }
@@ -30,31 +30,44 @@ const HomepageD = () => {
     });
   });
   return (
-    <motion.div
-      initial={{ x: "2000px" }}
-      animate={{ x: "0px" }}
-      transition={{ duration: 2 }}
+    <div      
       className="main  flex justify-center gap-28  m-auto p-24 ali"
     >
-      <div className="main-logo ">
+      <motion.div
+       initial={{ opacity:0}}
+       animate={{opacity:5}}
+       transition={{ duration: 1.5 }}
+      className="main-logo ">
         <img
           src={MainLogo}
           className="md:h-[550px] h-full w-full object-cover rounded-3xl"
         />
-      </div>
+      </motion.div>
       <div className=" h-screen flex-col mt-10">
         <Link to="/exam">
           <div className=" text-xs">Go to exam page</div>
         </Link>
-        <span className="border-b-4 border-green-500 pb-2 text-3xl font-bold tracking-widest ">
+        <motion.div 
+          initial={{ x: "2000px" }}
+          animate={{ x: "0px" }}
+          transition={{ duration: .3 }}
+        className="border-b-4 inline-block border-green-500 pb-2 text-3xl font-bold tracking-widest ">
           Information Portal For
-        </span>
-        <motion.div drag className="text-5xl mt-4  font-bold">
+        </motion.div>
+        <motion.div 
+          initial={{ x: "2000px" }}
+          animate={{ x: "0px" }}
+          transition={{ duration: .4 }}
+        className="text-5xl mt-4  font-bold">
           {" "}
           <motion.span className="text-red-600 ">Bihar</motion.span> Higher
           Education
         </motion.div>
-        <div className="flex flex-col items-center justify-center mt-14 pl-8">
+        <motion.div
+          initial={{ x: "2000px" }}
+          animate={{ x: "0px" }}
+          transition={{ duration: .5 }}
+        className="flex flex-col items-center justify-center mt-14 pl-8">
           <label htmlFor="otp" className="p-2">
             Enter Your OTP
           </label>
@@ -69,7 +82,7 @@ const HomepageD = () => {
               />
             ))}
           </div>
-        </div>
+        </motion.div>
 
         <div className="flex flex-row justify-between mt-24">
           <div className="previous mt-6 pl-24">
@@ -88,7 +101,7 @@ const HomepageD = () => {
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
