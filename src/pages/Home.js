@@ -10,7 +10,7 @@ const Home = () => {
     initial={{ y: "-2000px" }}
     animate={{ y: "0px" }}
     exit={{ x: "-2000px" }}
-    transition={{ duration: 2 }}
+    transition={{ duration: 1 }}
     className="main  flex justify-center gap-28  m-auto p-24 ali">
       <div className="main-logo "> 
     <img src={MainLogo} className="md:h-[550px] h-full w-full object-cover rounded-3xl"/>

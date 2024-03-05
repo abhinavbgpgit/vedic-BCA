@@ -16,43 +16,58 @@ useEffect(()=>{
 
 
   return (
-    <motion.div
-      initial={{ x: "2000px" }}
-      animate={{ x: "0px" }}
-      transition={{ duration: 2 }}
+    <div
+
       className="main  flex justify-center gap-28  m-auto p-24 ali"
     >
-      <div className="main-logo ">
+      <motion.div
+       initial={{ opacity:0 }}
+       animate={{ opacity:5}}
+       transition={{ duration: 1.5 }}
+      className="main-logo ">
         <img
           src={MainLogo}
           className="md:h-[550px] h-full w-full object-cover rounded-3xl "
         />
-      </div>
+      </motion.div>
       <div className=" h-screen flex-col mt-10">
         <Link to="/exam">
           <div className=" text-xs">Go to exam page</div>
         </Link>
-        <span className="border-b-4 border-green-500 pb-2 text-3xl font-bold tracking-widest ">
+        <motion.div
+         initial={{ x: "2000px" }}
+         animate={{ x: "0px" }}
+         transition={{ duration: .2 }}
+        className="border-b-4 inline-block border-green-500 pb-2 text-3xl font-bold tracking-widest ">
           Information Portal For
-        </span>
-        <motion.div drag className="text-5xl mt-4  font-bold">
+        </motion.div>
+        <motion.div 
+         initial={{ x: "2000px" }}
+         animate={{ x: "0px" }}
+         transition={{ duration: .3 }}
+        className="text-5xl mt-4  font-bold">
           {" "}
           <motion.span className="text-red-600 ">Bihar</motion.span> Higher
           Education
         </motion.div>
 
-        <div className="w-[500px] pt-10 pl-24">
+        <motion.div
+         initial={{ x: "2000px" }}
+         animate={{ x: "0px" }}
+         transition={{ duration: .4 }}
+        className="w-[500px] pt-10 pl-24">
           <div className="mb-2 block relative text-base">
             <Label
               htmlFor="phoneNumber"
               value="Phone Number"
               className="text-base"
             />
-            <motion.div drag className="absolute z-10 mt-4 ml-2 text-2xl">
+            <div drag className="absolute z-10 mt-4 ml-2 text-2xl">
               <img src={IndianFlag} alt="" className="h-6" />
-            </motion.div>
+            </div>
           </div>
-          <div className="flex">
+          <div
+          className="flex">
             <select
               id="countryCode"
               name="countryCode"
@@ -72,8 +87,12 @@ useEffect(()=>{
               required
             />
           </div>
-        </div>
-        <div className="w-[500px] pt-6 pl-24">
+        </motion.div>
+        <motion.div
+         initial={{ x: "2000px" }}
+         animate={{ x: "0px" }}
+         transition={{ duration: .5 }}
+        className="w-[500px] pt-6 pl-24">
           <div className="mb-2 block relative text-base">
             <label htmlFor="password" className="text-base">
               Password
@@ -89,9 +108,13 @@ useEffect(()=>{
             className="text-sm text-gray-500 rounded-lg pl-12 w-[400px]"
             required
           />
-        </div>
+        </motion.div>
 
-        <div className="w-[500px] pt-6 pl-24">
+        <motion.div
+         initial={{ x: "2000px" }}
+         animate={{ x: "0px" }}
+         transition={{ duration: .6 }}
+       className="w-[500px] pt-6 pl-24">
           <div className="mb-2 block relative text-base">
             <label htmlFor="confirmPassword" className="text-base">
               Confirm Password
@@ -107,7 +130,7 @@ useEffect(()=>{
             className="text-sm text-gray-500 rounded-lg pl-12 w-[400px]"
             required
           />
-        </div>
+        </motion.div>
         <div className="flex flex-row justify-between ">
           <div className="previous   mt-6 pl-24">
             <Link to="/HomepageB">
@@ -125,7 +148,7 @@ useEffect(()=>{
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
